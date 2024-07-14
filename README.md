@@ -22,6 +22,10 @@ Server (Python) - dnspad.py  - ran on the Linux server machine (public IP + doma
 1. Run DNS server on port 53
 2. While getting DNS queries assemble chunks into a file
 
+Domain config in Azure example:
+<img width="688" alt="image" src="https://github.com/user-attachments/assets/bf7dcc64-25a0-42ec-9be6-9142c2d64312">
+
+
 # RFC limitations
 * Label / subdomain:  `63` characters maximum
 * Full Domain: `255` characters maximum
