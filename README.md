@@ -61,3 +61,24 @@ Mitigation: avoid generating a pattern
 2. try prolong, 5 request in 5 hours
 3. use different DoH services and methods (POST requests, not only GET)
 4. use different domains for server
+
+# Future development ideas
+1. client: strings obfuscation
+2. client: add more DoH services (google)
+3. client: add POST functionality for Cloudflare (weird protocol )
+4. client: stream cipher encryption
+5. server: stream cipher encryption
+6. protocol optimalization for more data in one query (short domain)
+https://micro.domains/
+7. add a filename to protocol (for example first bytes- would tell the filename length, then filename itself, then contents of data)
+8. 
+Having 5 letters domain ? How many maximum data ? `243` bytes in data (currently `228` )
+
+for example: `0qf.in`
+
+ ```
+ 54 chars + 63chars + 63chars + 63chars + 12 chars
+```
+ 243  12 chars
+<42data>.<63data>.<63data>.<63data>.<2id>.a.0qf.in
+
