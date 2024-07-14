@@ -48,7 +48,7 @@ class BaseDNSHandler(socketserver.BaseRequestHandler):
             socket.sendto(self.query_cache[qname], self.client_address)
             return
 
-        domain = 'a.chromalin.com'
+        domain = 'a.abcdefghi.com'
         if qname.endswith(domain + '.'):
             encoded_subdomain = qname.replace('.' + domain + '.', '').strip()
             subdomain_parts = encoded_subdomain.split('.')
